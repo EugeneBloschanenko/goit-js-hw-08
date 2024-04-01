@@ -14,7 +14,7 @@ body {
   line-height: 1.5;
 }
 
-.galleryStyle {
+.gallery-style {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -23,18 +23,18 @@ body {
   align-items: center;
 }
 
-.imageStyle {
+.image-style {
   width: 500px; 
   border-radius: 10px;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
 }
 
-.imageStyle:hover {
+.image-style:hover {
   transform: scale(1.04); 
 }
 
-.boxStyle {
+.box-style {
   border-radius: 10px;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
 }

@@ -65,19 +65,19 @@ const images = [
   ];
 
 const gallery = document.querySelector('.gallery');
-gallery.classList.add('galleryStyle');
+gallery.classList.add('gallery-style');
 
 
 const markup = images.map(({preview, original, description}) =>
 `<li class="gallery-item">
-<a class="gallery-link" href="${original}">
+ <a class="gallery-link" href="${original}">
   <img
-    class="gallery-image imageStyle"
+    class="gallery-image image-style"
     src="${preview}"
     data-source="${original}"
     alt="${description}"
   />
-</a>
+ </a>
 </li>` 
 ).join('');
 // console.log(markup);
@@ -90,8 +90,10 @@ function handleModalOpen(event) {
   event.preventDefault();
   if (event.currentTarget === event.target) return;
 
- const currentImage = event.target.closest(".gallery-link").getAttribute('href');
-//  console.log(currentImage);
+ const currentImage = event.target.dataset.source;
+ 
+//  event.target.closest(".gallery-link").getAttribute("href");
+ console.log(currentImage);
 
   const instance = basicLightbox.create
   (`<div>
